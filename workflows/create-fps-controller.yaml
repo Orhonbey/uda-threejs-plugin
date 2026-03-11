@@ -1,0 +1,39 @@
+name: create-fps-controller
+description: Set up first-person movement with PointerLock, WASD, mouse look, and jumping
+steps:
+  - id: gather-requirements
+    type: ask
+    name: Gather Requirements
+    questions:
+      - "What move speed? (default: 6 units/sec)"
+      - "What mouse sensitivity? (default: 0.002)"
+      - "Do you need jumping? If yes, what gravity and jump force? (defaults: gravity=20, jump=8)"
+      - "What player height? (default: 1.5 units — eye level)"
+      - "Do you need collision with walls? (grid-based or none)"
+  - id: generate-input-system
+    type: auto
+    name: Generate Input System
+    actions:
+      - "Create input Set with keydown/keyup handlers"
+      - "Map WASD and arrow keys to forward/backward/left/right aliases"
+      - "Add pointer lock on canvas click"
+      - "Add mousemove handler with sensitivity and pitch clamping"
+      - "Clear inputs on pointer lock loss"
+  - id: generate-movement
+    type: auto
+    name: Generate Movement Logic
+    actions:
+      - "Create updatePlayer(dt) function"
+      - "Calculate forward/right vectors from yaw"
+      - "Normalize diagonal movement"
+      - "Apply collision detection if requested"
+      - "Add gravity and jump if requested"
+      - "Sync camera position and rotation from player state"
+  - id: verify
+    type: auto
+    name: Verify Controller
+    actions:
+      - "Ensure camera.rotation.order is YXZ"
+      - "Ensure pitch is clamped to ±π/2"
+      - "Ensure all movement multiplies by dt"
+      - "Ensure diagonal speed equals cardinal speed"

@@ -1,0 +1,127 @@
+{
+  "Scene": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/scenes/Scene",
+    "versions": ["r1+"]
+  },
+  "PerspectiveCamera": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/cameras/PerspectiveCamera",
+    "versions": ["r1+"]
+  },
+  "OrthographicCamera": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/cameras/OrthographicCamera",
+    "versions": ["r1+"]
+  },
+  "WebGLRenderer": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/renderers/WebGLRenderer",
+    "versions": ["r1+"]
+  },
+  "InstancedMesh": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/objects/InstancedMesh",
+    "versions": ["r109+"]
+  },
+  "Sprite": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/objects/Sprite",
+    "versions": ["r1+"]
+  },
+  "Group": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/objects/Group",
+    "versions": ["r1+"]
+  },
+  "Raycaster": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/core/Raycaster",
+    "versions": ["r1+"]
+  },
+  "Clock": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/core/Clock",
+    "versions": ["r1+"]
+  },
+  "BoxGeometry": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/geometries/BoxGeometry",
+    "versions": ["r1+"]
+  },
+  "PlaneGeometry": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/geometries/PlaneGeometry",
+    "versions": ["r1+"]
+  },
+  "CylinderGeometry": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/geometries/CylinderGeometry",
+    "versions": ["r1+"]
+  },
+  "MeshBasicMaterial": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/materials/MeshBasicMaterial",
+    "versions": ["r1+"]
+  },
+  "MeshLambertMaterial": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/materials/MeshLambertMaterial",
+    "versions": ["r1+"]
+  },
+  "MeshStandardMaterial": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/materials/MeshStandardMaterial",
+    "versions": ["r72+"]
+  },
+  "SpriteMaterial": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/materials/SpriteMaterial",
+    "versions": ["r1+"]
+  },
+  "CanvasTexture": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/textures/CanvasTexture",
+    "versions": ["r75+"]
+  },
+  "AmbientLight": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/lights/AmbientLight",
+    "versions": ["r1+"]
+  },
+  "DirectionalLight": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/lights/DirectionalLight",
+    "versions": ["r1+"]
+  },
+  "PointLight": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/lights/PointLight",
+    "versions": ["r1+"]
+  },
+  "Fog": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/scenes/Fog",
+    "versions": ["r1+"]
+  },
+  "AudioListener": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/audio/AudioListener",
+    "versions": ["r1+"]
+  },
+  "PositionalAudio": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/audio/PositionalAudio",
+    "versions": ["r1+"]
+  },
+  "Vector3": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/math/Vector3",
+    "versions": ["r1+"]
+  },
+  "Matrix4": {
+    "module": "three",
+    "url": "https://threejs.org/docs/#api/en/math/Matrix4",
+    "versions": ["r1+"]
+  }
+}

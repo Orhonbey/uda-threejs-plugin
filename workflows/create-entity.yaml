@@ -1,0 +1,46 @@
+name: create-entity
+description: Create a new game entity with blocky character model and AI behavior
+steps:
+  - id: gather-requirements
+    type: ask
+    name: Gather Requirements
+    questions:
+      - "What type of entity? (enemy bot, NPC, ally)"
+      - "What color palette? (shirt, pants, accent, skin hex colors)"
+      - "What AI behavior? (patrol, chase player, guard position, none)"
+      - "What health amount? (default: 100)"
+      - "Should it have a health bar above its head?"
+      - "Should it have shooting capability? If yes, what fire rate and range?"
+  - id: generate-model
+    type: auto
+    name: Generate Character Model
+    actions:
+      - "Create blocky character using BoxGeometry primitives"
+      - "Build head, body, arms (pivot groups), legs (pivot groups)"
+      - "Apply color palette via MeshLambertMaterial"
+      - "Add muzzle flash PointLight if shooting enabled"
+      - "Store part references in group.userData.parts"
+  - id: generate-data
+    type: auto
+    name: Generate Entity Data
+    actions:
+      - "Create spawn function returning data object + visual group"
+      - "Include position, health, alive state, cooldown timers"
+      - "Add walk animation function using sin(walkCycle)"
+      - "Add cleanup function with traverse + dispose"
+  - id: generate-ai
+    type: auto
+    name: Generate AI Behavior
+    actions:
+      - "Implement chosen behavior pattern"
+      - "Add line-of-sight check before shooting"
+      - "Add engagement/retreat range logic"
+      - "Stagger initial cooldowns to prevent synchronized behavior"
+  - id: verify
+    type: auto
+    name: Verify Entity
+    actions:
+      - "Ensure pivot groups are used for limb animation"
+      - "Ensure dispose is called on removal"
+      - "Ensure all timers use delta time"
+      - "Ensure AI checks alive flag before updating"

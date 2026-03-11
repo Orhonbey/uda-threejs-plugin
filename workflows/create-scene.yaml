@@ -1,0 +1,31 @@
+name: create-scene
+description: Scaffold a new Three.js scene with camera, renderer, and lighting
+steps:
+  - id: gather-requirements
+    type: ask
+    name: Gather Requirements
+    questions:
+      - "What is the scene name/purpose? (e.g. MainGame, Menu, TestLevel)"
+      - "What camera type? (perspective for 3D games, orthographic for 2D)"
+      - "What lighting setup? (ambient+directional for outdoor, ambient+point for indoor)"
+      - "Do you need fog? If yes, what color and distance range?"
+      - "Which file should this go in? (e.g. game.js, scene.js)"
+  - id: generate-scene
+    type: auto
+    name: Generate Scene Code
+    actions:
+      - "Create scene with background color"
+      - "Create camera with appropriate FOV and clipping planes"
+      - "Create WebGLRenderer with antialias and pixel ratio capping"
+      - "Add specified lighting (ambient + directional/point)"
+      - "Add fog if requested"
+      - "Add window resize handler"
+      - "Create basic game loop with requestAnimationFrame"
+  - id: verify
+    type: auto
+    name: Verify Setup
+    actions:
+      - "Ensure canvas element exists in HTML"
+      - "Ensure camera rotation order is YXZ for FPS games"
+      - "Ensure pixel ratio is capped at 2"
+      - "Ensure fog color matches background color"

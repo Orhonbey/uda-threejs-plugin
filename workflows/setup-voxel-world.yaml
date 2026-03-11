@@ -1,0 +1,50 @@
+name: setup-voxel-world
+description: Build a voxel world from a 2D grid map with InstancedMesh walls and collision
+steps:
+  - id: gather-requirements
+    type: ask
+    name: Gather Requirements
+    questions:
+      - "What map size? (width x height in grid cells, e.g. 32x32)"
+      - "What wall height? (number of stacked blocks, default: 3)"
+      - "Do you need a procedural map generator or a hand-crafted layout?"
+      - "What ground texture style? (grass, sand, stone, custom)"
+      - "What wall texture style? (stone blocks, brick, custom)"
+      - "How many spawn points do you need and where?"
+  - id: generate-map-data
+    type: auto
+    name: Generate Map Data
+    actions:
+      - "Create map data structure with width, height, wallHeight, grid"
+      - "Build grid as array of Uint8Array rows (0=empty, 1=wall)"
+      - "Add border walls around entire map"
+      - "Place interior walls/obstacles per layout"
+      - "Define spawn points array with {x, z} coordinates"
+      - "Add getCell helper with out-of-bounds-as-wall"
+  - id: generate-world-builder
+    type: auto
+    name: Generate World Builder
+    actions:
+      - "Create floor with PlaneGeometry and procedural texture"
+      - "Count wall instances in first pass"
+      - "Create InstancedMesh with exact count"
+      - "Set instance transforms with dummy Object3D pattern"
+      - "Set instanceMatrix.needsUpdate = true"
+      - "Add fog matching scene background color"
+  - id: generate-collision
+    type: auto
+    name: Generate Collision System
+    actions:
+      - "Create isWallAt(mapData, x, z) using Math.floor"
+      - "Create moveWithCollision with 4-corner check and axis-independent sliding"
+      - "Create hasLineOfSight with stepped ray march"
+      - "Create findWallHit for tracer clipping"
+  - id: verify
+    type: auto
+    name: Verify World
+    actions:
+      - "Ensure InstancedMesh count matches actual wall blocks"
+      - "Ensure blocks are centered at x+0.5, y+0.5, z+0.5"
+      - "Ensure floor is centered on grid"
+      - "Ensure NearestFilter on procedural textures"
+      - "Ensure collision handles out-of-bounds as wall"

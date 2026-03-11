@@ -1,0 +1,71 @@
+{
+  "features": {
+    "instanced-mesh": {
+      "since": "r109",
+      "stable": "r120",
+      "class": "THREE.InstancedMesh",
+      "notes": "GPU instancing for identical geometries"
+    },
+    "webgl2-renderer": {
+      "since": "r118",
+      "stable": "r130",
+      "notes": "WebGL2 became default renderer"
+    },
+    "webgpu-renderer": {
+      "since": "r150",
+      "stable": "experimental",
+      "class": "THREE.WebGPURenderer",
+      "notes": "WebGPU support, experimental"
+    },
+    "canvas-texture": {
+      "since": "r75",
+      "stable": "r75",
+      "class": "THREE.CanvasTexture",
+      "notes": "Texture from Canvas2D element"
+    },
+    "sprite-material-rotation": {
+      "since": "r100",
+      "stable": "r100",
+      "class": "THREE.SpriteMaterial",
+      "notes": "SpriteMaterial.rotation property"
+    },
+    "instanced-mesh-color": {
+      "since": "r126",
+      "stable": "r130",
+      "notes": "setColorAt() for per-instance colors"
+    },
+    "additive-blending": {
+      "since": "r1",
+      "stable": "r1",
+      "notes": "THREE.AdditiveBlending constant"
+    },
+    "import-maps": {
+      "since": "r150",
+      "stable": "r150",
+      "notes": "Official support for ES module import maps, no bundler needed"
+    },
+    "mesh-lambert-material": {
+      "since": "r1",
+      "stable": "r1",
+      "class": "THREE.MeshLambertMaterial",
+      "notes": "Diffuse-only lighting, best perf/quality for voxel games"
+    },
+    "mesh-standard-material": {
+      "since": "r72",
+      "stable": "r80",
+      "class": "THREE.MeshStandardMaterial",
+      "notes": "PBR material with metalness/roughness"
+    },
+    "pointer-lock-controls": {
+      "since": "r75",
+      "stable": "r100",
+      "notes": "PointerLockControls in examples/jsm — or build your own for full control"
+    },
+    "audio-listener": {
+      "since": "r1",
+      "stable": "r1",
+      "class": "THREE.AudioListener",
+      "notes": "Web Audio API integration"
+    }
+  }
+}

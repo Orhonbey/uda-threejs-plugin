@@ -1,0 +1,24 @@
+{
+  "name": "uda-threejs",
+  "version": "0.1.0",
+  "engine": "threejs",
+  "uda_version": ">=0.6.0",
+  "description": "Three.js game development knowledge, workflows, and agents for UDA",
+  "author": "UDA Contributors",
+  "license": "MIT",
+  "capabilities": {
+    "knowledge": true,
+    "workflows": true,
+    "agents": true
+  },
+  "knowledge": ["knowledge/**/*.md"],
+  "workflows": ["workflows/**/*.yaml"],
+  "agents": ["agents/**/*.md"],
+  "engineVersions": {
+    "min": "r150",
+    "max": "r175",
+    "tested": ["r162", "r170"]
+  },
+  "i18n": ["en"],
+  "tags": ["threejs", "webgl", "game-dev", "javascript", "browser"]
+}
